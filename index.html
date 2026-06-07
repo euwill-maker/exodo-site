@@ -135,6 +135,19 @@ body>*:not(.skybg){position:relative;z-index:1}
 @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.cards{grid-template-columns:1fr 1fr;gap:12px}.card{padding:18px 15px}.card p{font-size:13px}}
 
+/* MURALHA / 3 ARMAS */
+.mur{display:grid;grid-template-columns:.82fr 1.18fr;gap:48px;align-items:center;margin-top:50px}
+.mur-phone{position:relative;justify-self:center;width:240px;max-width:64vw}
+.mur-phone .phone-frame{animation:float 7s ease-in-out infinite}
+.mur-list{display:flex;flex-direction:column;gap:16px}
+.mur-arma{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-left:3px solid var(--ac);border-radius:16px;background:var(--bg2);padding:20px;transition:transform .2s,box-shadow .2s}
+.mur-arma:hover{transform:translateX(5px);box-shadow:-6px 0 24px -12px var(--ac)}
+.mur-ic{width:50px;height:50px;flex-shrink:0;border-radius:13px;display:grid;place-items:center;color:var(--ac);background:rgba(0,0,0,.22);border:1px solid var(--ac)}
+.mur-ic svg{width:26px;height:26px}
+.mur-arma h3{font-size:19px;margin-bottom:6px}
+.mur-arma p{font-size:14px;color:var(--txt2)}
+@media(max-width:820px){.mur{grid-template-columns:1fr;gap:30px}.mur-list{gap:13px}.mur-arma{padding:17px}}
+
 /* BASE BÍBLICA */
 .biblia{display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;align-items:center}
 .biblia-quotes{display:flex;flex-direction:column;gap:18px}
@@ -379,10 +392,25 @@ footer{position:relative;border-top:1px solid var(--line2);padding:50px 0 44px;c
       <h2 class="h-sec reveal d1">Quando a tentação ataca,<br>você tem <span class="grad-text">3 defesas.</span></h2>
       <p class="lead center reveal d2">Um toque no botão de emergência e você escolhe como quer ser socorrido naquele momento.</p>
     </div>
-    <div class="cards" style="grid-template-columns:repeat(3,1fr)">
-      <div class="card reveal d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div><h3>🛡️ Armadura de Deus</h3><p>Baseado em Efésios 6, você "veste" cada peça — o Escudo da Fé, a Espada do Espírito — com versículos e afirmações até estar de pé e vitorioso.</p></div>
-      <div class="card reveal d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 4C6 8.5 6 15.5 10.5 20"/><path d="M13.5 4C18 8.5 18 15.5 13.5 20"/><path d="M3.5 17.5q2-2 4 0t4 0 4 0 4 0"/></svg></div><h3>🌊 Surfe a Onda</h3><p>A vontade é uma onda que sobe e passa. Um cronômetro com respiração guiada te mostra a tentação perdendo força em tempo real.</p></div>
-      <div class="card reveal d3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c2.5 3.5 5 5.5 5 9a5 5 0 0 1-10 0c0-1.6.7-2.8 1.7-3.8.4 1.2 1.1 1.8 2 1.8C12.2 8.5 11 6 12 3z"/></svg></div><h3>🔥 Sala de Guerra</h3><p>Clamor e oração, suas fotos e motivos em destaque, um louvor pra ouvir e o botão pra chamar reforço de um irmão na fé.</p></div>
+    <div class="mur">
+      <div class="mur-phone reveal d1">
+        <div class="phone-glow"></div>
+        <div class="phone-frame"><img src="app-modobatalha.png" alt="Tela Modo Batalha do app Êxodo com as 3 defesas"></div>
+      </div>
+      <div class="mur-list">
+        <div class="mur-arma reveal d1" style="--ac:#C9A24B">
+          <div class="mur-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div>
+          <div><h3>Armadura de Deus</h3><p>Baseado em Efésios 6, você "veste" cada peça — o Escudo da Fé, a Espada do Espírito — com versículos e afirmações até estar de pé e vitorioso.</p></div>
+        </div>
+        <div class="mur-arma reveal d2" style="--ac:#2C7DA0">
+          <div class="mur-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 4C6 8.5 6 15.5 10.5 20"/><path d="M13.5 4C18 8.5 18 15.5 13.5 20"/><path d="M3.5 17.5q2-2 4 0t4 0 4 0 4 0"/></svg></div>
+          <div><h3>Surfe a Onda</h3><p>A vontade é uma onda que sobe e passa. Um cronômetro com respiração guiada te mostra a tentação perdendo força em tempo real.</p></div>
+        </div>
+        <div class="mur-arma reveal d3" style="--ac:#B5532A">
+          <div class="mur-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c2.5 3.5 5 5.5 5 9a5 5 0 0 1-10 0c0-1.6.7-2.8 1.7-3.8.4 1.2 1.1 1.8 2 1.8C12.2 8.5 11 6 12 3z"/></svg></div>
+          <div><h3>Sala de Guerra</h3><p>Clamor e oração, suas fotos e motivos em destaque, um louvor pra ouvir e o botão pra chamar reforço de um irmão na fé.</p></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
